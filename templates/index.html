@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Click Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h2>Click the button to show a message!</h2>
+
+<button id="show-message">Show Message</button>
+<p id="message" style="display: none;">ازيك يا حبيبي عامل ايه</p>
+
+<script>
+$(document).ready(function() {
+    // Attach a click event listener to the button
+    $("#show-message").click(function() {
+        // Show the hidden message
+        $("#message").show();
+    });
+});
+</script>
+
+</body>
+</html>
