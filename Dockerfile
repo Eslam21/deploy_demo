@@ -14,8 +14,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Make port 80 available to the world outside this container
 EXPOSE 80
 
-# Define environment
- variableENV NAME World
+# Define environment variable
+ENV NAME World
 
 # Add a health check command
 HEALTHCHECK CMD curl --fail http://localhost:80 || exit 1
