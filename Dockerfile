@@ -9,10 +9,8 @@ WORKDIR /app
 COPY . /app
 
 # Install any packages needed specified in requirements.txt
-RUN pip install --no-dir-cache -r requirements.txt
-
-# Make port 80 available to the world outside this container
-# EXPOSE 80  - Commented out as it is not necessary to expose port 80
+RUN pip install --no-cache-dir -r requirements.txt
+# Changed "--no-dir-cache" to "--no-cache-dir" to fix typo
 
 # Define environment variable
 ENV NAME World
